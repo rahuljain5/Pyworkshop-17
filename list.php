@@ -3,10 +3,10 @@
 <h1 style="position:absolute; left:40%; display:inline;">Members list:</h1>
 <img id="fsmklogo" src="fsmk.jpg" alt="fsmk logo" height="90px" width="90px" style="float:right; display:inline;" />
 <?php
-$connect=mysqli_connect('localhost','root','','toggle');
+$connect=mysqli_connect('localhost','username','password','dbname');
 echo "<meta name=viewport content=width=device-width, initial-scale=1><link rel=stylesheet href=bootstrap.min.css>";
 $str="<table class=table table-striped>";	
-$r=mysqli_query($connect,"select name,usn,year,email from participants");
+$r=mysqli_query($connect,"select name,usn,year,email from pyworkshop");
 		$str .="<tr>";
 		$str .="<td>Name</td><td>USN</td><td>Year</td><td>email</td>";
 		 $str .="</tr>";
