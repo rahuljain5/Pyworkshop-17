@@ -1,5 +1,13 @@
 <?php
-$connect=mysqli_connect('localhost','root','','toggle');
+
+$connect=mysqli_connect('localhost','uname','password','dbname');
+function verify($str)
+{
+  $data = trim($str);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 if(isset($_POST['submit']))
 {
 	if($_POST['usn']==NULL) $usn="";
